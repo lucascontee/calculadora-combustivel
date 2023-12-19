@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de combustível</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mq.css">
+    
+</head>
+<body>
+    <main>
+        <div id="botaoTema">
+            <input type="checkbox" name="dark" id="checkbox" class="checkbox">
+            <label for="checkbox" class="label">
+                <i class="fa fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+                
+            </label>
+        </div>
+        <section id="form">
+            <article id="title">
+                <h1>CALCULADORA DE GASTO DE COMBUSTÍVEL</h1>
+                <p>Para calcular o quanto você vai gastar de combustível, basta inserir os dados: <br>
+                    <label for="media">-MÉDIA</label> (quantos quilômetros seu carro percorre com um litro de combustível) <br>
+                    <label for="distancia">-DISTÂNCIA</label> (quantos quilômetros você vai percorrer) <br>
+                    <label for="preco">-PREÇO</label> da gasolina no posto onde você costuma abastecer (se não souber, coloque um valor aproximado)</p>
+            </article>
+            <article id="dados">
+                <label for="media">Media (Km/l)</label>
+                <input type="text" name="media" id="media" placeholder="00" required>
+
+                <label for="distancia">Distancia (Km)</label>
+                <input type="text" name="distancia" id="distancia" placeholder="00" required>
+
+                <label for="preco">Preço (R$)</label>
+                <input type="text" name="preco" id="preco" placeholder="0.0" required>
+
+                <input type="button" value="Calcular" id="calc" onclick="calcular()">
+            </article>
+            <article id="res">
+                <h2>Gasto total:</h2>
+                <h3 id="resfinal">R$ 000,00</h3>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>

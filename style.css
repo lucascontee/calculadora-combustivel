@@ -1,0 +1,150 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+    font-family:'Roboto', sans-serif;;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+body{
+    background-color: rgb(247, 247, 247);
+    transition: background 0.2s linear;
+}
+
+body.dark{
+    background-color: rgb(53, 53, 53);
+}
+
+main{
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-color: rgb(247, 247, 247);
+}
+
+main.dark{
+    background-color: rgb(53, 53, 53);
+}
+
+#title.dark{
+    color: white;
+}
+
+
+
+#form{
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    
+}
+
+#title{
+    min-height: 350px;
+    color: rgb(48, 48, 48);
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin: 20px 0px 10px 0px;
+    
+}
+
+#title h1{
+    font-size: 25px;
+    color: #025E73;
+}
+
+#title p{
+    text-align: justify;
+}
+
+#dados{
+    min-height: 30%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+label{
+    color: #F2A71B;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+section input{
+    margin-bottom: 15px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#calc{
+    color: white;
+    border: 1px solid #025E73;
+    background-color: #007e9b;
+    margin-top: 40px;
+}
+
+#calc:hover{
+    background-color: #025E73;
+}
+
+#res{
+    margin-top: 40px;
+    color: #025E73;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+#res h3{
+    font-size: 70px;
+    
+}
+
+
+/*BOTÃO DE TEMA*/
+
+#botaoTema{
+    margin: 10px 0px 0px 10px;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5s);
+}
+
+.label .ball{
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}

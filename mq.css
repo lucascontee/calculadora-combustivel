@@ -1,0 +1,24 @@
+@media screen and (min-width: 650px) {
+    #title{
+        width: 50%;
+        min-height: 200px;
+        margin: 20px auto 40px auto;
+        letter-spacing: 1px;
+        line-height: 30px;
+        padding: 0px;
+    }
+
+    #title p{
+        margin: 40px 0px 20px 0px;
+
+    }
+
+    #dados{
+        width: 50%;
+        margin: 0px auto;
+    }
+
+    #res{
+        margin-top: 60px;
+    }
+}
