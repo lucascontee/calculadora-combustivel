@@ -17,16 +17,29 @@ function calcular(){
     let dist = Number(distancia.value)
     let prec = Number(preco.value)
     let res1 = dist / med * prec
-
-    if(media.value == 0){
-        window.alert("Insira a média")
-    } else if(distancia.value == 0){
-        window.alert("Insira a distância")
-    }else if(preco.value == 0){
-        window.alert("Insira o preço")
-    }
     
     res1 = res1.toFixed(2).replace('.', ',')
     resfinal.innerHTML = `R$ ${res1}`
+
+    if(media.value == 0 && distancia.value == 0 && preco.value == 0){
+        media.style.border = '2px solid red'
+        distancia.style.border = '2px solid red'
+        preco.style.border = '2px solid red'
+    } else if(media.value == 0 && distancia.value == 0){
+        media.style.border = '2px solid red'
+        distancia.style.border = '2px solid red'
+    } else if(distancia.value == 0 && preco.value == 0){
+        distancia.style.border = '2px solid red'
+        preco.style.border = '2px solid red'
+    } else if(media.value == 0 && preco.value == 0){
+        media.style.border = '2px solid red'
+        preco.style.border = '2px solid red'
+    } else if (media.value == 0){
+        media.style.border = '2px solid red'
+    } else if (distancia.value == 0){
+        distancia.style.border = '2px solid red'
+    } else if(preco.value == 0){
+        preco.style.border = '2px solid red'
+    }
     
 }
